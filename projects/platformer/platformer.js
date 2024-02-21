@@ -74,7 +74,7 @@ $(function () {
     createCannon("top", 350, 2000); // cannon on top left side
     createCannon("top", 1300, 2000); // cannon on the top middle side 
     createCannon("top", 850, 2000); // cannon on the top right side 
-    createCannon("right", 420, 2000); // cannon on the right side 
+    createCannon("right", 420, 2000); // cannon on the right side
 
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
