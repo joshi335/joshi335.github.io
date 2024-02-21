@@ -57,10 +57,12 @@ $(function () {
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
 
-  
-
-
-
+    createCollectable("database", 500, 300, 20, 0.5); // database collecttabale on platform one 
+    createCollectable("steve", 600, 200); // steve collectable on platform 5  
+    createCollectable("steve", 850, 500); // steve collectable on platform 2
+    createCollectable("database", 1200, 450, 20, 0.5); // database collectable on platform 3
+    createCollectable("grace", 900, 300); // grace collectable on platform 4 
+    createCollectable("database", 200, 200, 20, 0.5); //database collectable on platform 6
 
     // TODO 3
     // Create cannons
@@ -68,8 +70,11 @@ $(function () {
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay, width, height)
 
-
-
+    createCannon("left", 300, 2000); //  cannon on the left side
+    createCannon("top", 350, 2000); // cannon on top left side
+    createCannon("top", 1300, 2000); // cannon on the top middle side 
+    createCannon("top", 850, 2000); // cannon on the top right side 
+    createCannon("right", 420, 2000); // cannon on the right side 
 
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
