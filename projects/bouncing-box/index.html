@@ -19,7 +19,12 @@
 		}
 		.board{
 			height: 100vh;
-		}
+			background-image: url("cat.avif");
+			background-size: 1000px;
+			
+			
+
+			
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
@@ -27,7 +32,7 @@
 <body class="board">
 	<!-- HTML for the box -->
 	<div class="box">?</div>
-
+	
 	<script>
 		(function(){
 			'use strict'
@@ -81,6 +86,9 @@
 				if (positionX > boardWidth) {
 					speed = speed * -1;
 				}
+				if (positionX < 0) {
+					speed = speed * -1;
+				}
 
 				
 				
@@ -97,9 +105,14 @@
 			*/
 			function handleBoxClick() {
 				positionX = 0;
-				speed = speed + 3; 
 				points = points + 1;
 				changeBoxText(points);
+				if (speed > 0) {
+					speed = speed + 3;
+				}
+				else {
+					speed = speed - 3;
+				}
 				
 
 
