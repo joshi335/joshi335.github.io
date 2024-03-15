@@ -5,6 +5,10 @@
 	<title>Bouncing Box</title>
 	<script src="jquery.min.js"></script>
 	<style>
+		body{
+			background-image: url("cat.avif");
+			background-size: 1000px;
+		}
 		.box {
 			width: 70px;
 			height: 70px;
@@ -19,8 +23,8 @@
 		}
 		.board{
 			height: 100vh;
-			background-image: url("cat.avif");
-			background-size: 1000px;
+		}
+			
 			
 			
 
@@ -56,7 +60,7 @@
 			function moveBoxTo(newPositionX, newPositionY) {
 				box.css("left", newPositionX);
 				box.css('top', newPositionY);
-				box.css(radNum);
+				
 			}
 
 			// changes the text displayed on the Box
@@ -77,6 +81,8 @@
 			var speedY = 10;
 			var boardHeight = jQuery(window).height();
 			var randNum = Math.random() * 100;
+			var boardWidth = jQuery(window).width();
+			
 			
 			
 
@@ -89,9 +95,8 @@
 			function update() {
 				// Increase the value of positionX by 10
 				positionX = positionX + speed; 
-				positionY = positionY + speedY;
-				moveBoxTo(positionX);
 				moveBoxTo(positionX, positionY);
+				positionY = positionY + speedY;
 		
 				if (positionX > boardWidth) {
 					speed = speed * -1;
@@ -123,10 +128,8 @@
 				changeBoxText(points);
 				speed = speed + 3; 
 				speedY = speedY + 3;
-				randNum = Math.random() * boardHeight;
-				randNumY = Math.random() * boardWidth;
-				positionX = randNum;
-				positionY = randNumY;
+
+				
 				
 				if (speed > 0) {
 					speed = speed + 3;
