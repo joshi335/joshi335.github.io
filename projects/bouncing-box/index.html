@@ -54,13 +54,14 @@
       	function moveBoxTo(newPositionX, newPositionY) {
       		box.css("left", newPositionX);
       		box.css('top', newPositionY);
-      		box.css('background-color', colorStr);
+      		box.color('background-color', colorStr);
 
       	}
 
       	// changes the text displayed on the Box
       	function changeBoxText(newText) {
       		box.text(newText);
+			
       	}
 
       	//////////////////////////////////////////////////////////////////
@@ -81,8 +82,8 @@
       	var randomNumberBetween0and225 = Math.random() * 225;
 
       	function getRandomColor() {
-      		colorStr = "rgb(randoNumberBetween0and225 + randoNumberBetween0and225 + randoNumberBetween0and225)"
-      	}
+      		colorStr = rgb(randomNumberBetween0and255 + randomNumberBetween0and255 + randomNumberBetween0and255);      	
+		}
 
 
       	/*
